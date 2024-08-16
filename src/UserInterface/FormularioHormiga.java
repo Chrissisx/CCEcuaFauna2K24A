@@ -5,6 +5,10 @@ import java.awt.*;
 
 public class FormularioHormiga extends JFrame {
 
+    // Variables globales estáticas
+    private static final String CEDULA = "1755447057";
+    private static final String NOMBRES = "Criollo Christopher";
+
     // Declaración de componentes
     private JLabel ccNombreHormigaLabel;
     private JTextField ccNombreHormigaField;
@@ -21,12 +25,16 @@ public class FormularioHormiga extends JFrame {
     private JButton ccGuardarButton;
     private JButton ccCancelarButton;
 
+    // Etiquetas para cédula y nombres
+    private JLabel cedulaLabel;
+    private JLabel nombresLabel;
+
     public FormularioHormiga() {
         // Configuración básica del JFrame
         setTitle("Formulario de Hormigas");
         setSize(500, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new GridLayout(7, 2, 10, 10)); // GridLayout con 7 filas y 2 columnas
+        setLayout(new GridLayout(9, 2, 10, 10)); // GridLayout con 9 filas y 2 columnas
 
         // Inicialización de componentes
         ccNombreHormigaLabel = new JLabel("Nombre de Hormiga:");
@@ -56,7 +64,15 @@ public class FormularioHormiga extends JFrame {
         ccGuardarButton = new JButton("Guardar");
         ccCancelarButton = new JButton("Cancelar");
 
+        // Etiquetas para cédula y nombres
+        cedulaLabel = new JLabel("Cédula: " + CEDULA);
+        nombresLabel = new JLabel("Nombres: " + NOMBRES);
+
         // Agregar componentes al JFrame
+        add(cedulaLabel);
+        add(new JLabel()); // Espacio vacío
+        add(nombresLabel);
+        add(new JLabel()); // Espacio vacío
         add(ccNombreHormigaLabel);
         add(ccNombreHormigaField);
         add(ccTipoHormigaLabel);
