@@ -26,12 +26,12 @@ INSERT INTO CCProvincia
 ( "El Oro"                          , 1          , 1            ),
 ( "Esmeraldas"                      , 1          , 1            ),
 ( "Guayas"                          , 1          , 1            ),
-( "Los Ríos"                        , 1          , 1            ),
+( "Los Rios"                        , 1          , 1            ),
 ( "Manabí"                          , 1          , 1            ),
 ( "Santa Elena"                     , 1          , 1            ),
-( "Santo Domingo de los Tsáchilas"  , 1          , 1            ),
+( "Santo Domingo de los Tsachilas"  , 1          , 1            ),
 ( "Azuay"                           , 1          , 2            ),
-( "Bolívar"                         , 1          , 2            ),
+( "Bolivar"                         , 1          , 2            ),
 ( "Cañar"                           , 1          , 2            ),
 ( "Carchi"                          , 1          , 2            ),
 ( "Chimborazo"                      , 1          , 2            ),
@@ -44,9 +44,9 @@ INSERT INTO CCProvincia
 ( "Napo"                            , 1          , 3            ),
 ( "Orellana"                        , 1          , 3            ),
 ( "Pastaza"                         , 1          , 3            ),
-( "Sucumbíos"                       , 1          , 3            ),
+( "Sucumbios"                       , 1          , 3            ),
 ( "Zamora Chinchipe"                , 1          , 3            ),
-( "Galápagos"                       , 1          , 4            );
+( "Galapagos"                       , 1          , 4            );
 
 INSERT INTO CCTipoHormiga 
 ( NombreTipoHormiga ) VALUES 

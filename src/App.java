@@ -3,6 +3,7 @@ import DataAccess.CCRegionDAO;
 import DataAccess.CCProvinciaDAO;
 import DataAccess.CCTipoHormigaDAO;
 import DataAccess.CCSexoDAO;
+import BusinessLogic.CCRegionBL;
 import DataAccess.CCEstadoDAO;
 import DataAccess.CCIngestaNativaDAO;
 import DataAccess.CCGenoAlimentoDAO;
@@ -24,7 +25,19 @@ public class App {
             for (CCRegionDTO ccRegion : ccRegionDAO.readAll())
                 System.out.println(ccRegion.toString());
         } catch (Exception e) {
-            System.out.println("Error in CCRegionDAO: " + e.toString());
+            System.out.println("Error en CCRegionDAO: " + e.toString());
+        }
+
+        // BL
+        
+        try {
+            // Test CCRegionDAO
+            CCRegionBL ccRegionBCCRegionBL = new CCRegionBL();
+            System.out.println("CCRegion:");
+            for (CCRegionDTO ccRegion : ccRegionBCCRegionBL.getAll())
+                System.out.println(ccRegion.toString());
+        } catch (Exception e) {
+            System.out.println("Error en CCRegionDAO: " + e.toString());
         }
 
         try {
@@ -34,7 +47,7 @@ public class App {
             for (CCPaisDTO ccPais : ccPaisDAO.readAll())
                 System.out.println(ccPais.toString());
         } catch (Exception e) {
-            System.out.println("Error in CCPaisDAO: " + e.toString());
+            System.out.println("Error en CCPaisDAO: " + e.toString());
         }
 
         try {
@@ -44,7 +57,7 @@ public class App {
             for (CCProvinciaDTO ccProvincia : ccProvinciaDAO.readAll())
                 System.out.println(ccProvincia.toString());
         } catch (Exception e) {
-            System.out.println("Error in CCProvinciaDAO: " + e.toString());
+            System.out.println("Error en CCProvinciaDAO: " + e.toString());
         }
 
         try {
@@ -54,7 +67,7 @@ public class App {
             for (CCTipoHormigaDTO ccTipoHormiga : ccTipoHormigaDAO.readAll())
                 System.out.println(ccTipoHormiga.toString());
         } catch (Exception e) {
-            System.out.println("Error in CCTipoHormigaDAO: " + e.toString());
+            System.out.println("Error en CCTipoHormigaDAO: " + e.toString());
         }
 
         try {
@@ -64,7 +77,7 @@ public class App {
             for (CCSexoDTO ccSexo : ccSexoDAO.readAll())
                 System.out.println(ccSexo.toString());
         } catch (Exception e) {
-            System.out.println("Error in CCSexoDAO: " + e.toString());
+            System.out.println("Error en CCSexoDAO: " + e.toString());
         }
 
         try {
@@ -74,7 +87,7 @@ public class App {
             for (CCEstadoDTO ccEstado : ccEstadoDAO.readAll())
                 System.out.println(ccEstado.toString());
         } catch (Exception e) {
-            System.out.println("Error in CCEstadoDAO: " + e.toString());
+            System.out.println("Error en CCEstadoDAO: " + e.toString());
         }
 
         try {
@@ -84,7 +97,7 @@ public class App {
             for (CCIngestaNativaDTO ccIngestaNativa : ccIngestaNativaDAO.readAll())
                 System.out.println(ccIngestaNativa.toString());
         } catch (Exception e) {
-            System.out.println("Error in CCIngestaNativaDAO: " + e.toString());
+            System.out.println("Error en CCIngestaNativaDAO: " + e.toString());
         }
 
         try {
@@ -94,7 +107,7 @@ public class App {
             for (CCGenoAlimentoDTO ccGenoAlimento : ccGenoAlimentoDAO.readAll())
                 System.out.println(ccGenoAlimento.toString());
         } catch (Exception e) {
-            System.out.println("Error in CCGenoAlimentoDAO: " + e.toString());
+            System.out.println("Error en CCGenoAlimentoDAO: " + e.toString());
         }
     }
 }

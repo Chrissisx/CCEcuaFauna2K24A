@@ -1,0 +1,112 @@
+// Definición de relaciones
+Ref: CCProvincia.CodigoPais > CCPais.CodigoPais
+Ref: CCProvincia.CodigoRegion > CCRegion.CodigoRegion
+Ref: CCAlimento.CodigoIngestaNativa > CCIngestaNativa.CodigoIngestaNativa
+Ref: CCAlimento.CodigoGenoAlimento > CCGenoAlimento.CodigoGenoAlimento
+Ref: CCHormigaAlimento.CodigoHormiga > CCHormiga.CodigoHormiga
+Ref: CCHormigaAlimento.CodigoAlimento > CCAlimento.CodigoAlimento
+Ref: CCHormiga.CodigoSexo > CCSexo.CodigoSexo
+Ref: CCHormiga.CodigoTipoHormiga > CCTipoHormiga.CodigoTipoHormiga
+Ref: CCHormiga.CodigoEstado > CCEstado.CodigoEstado
+Ref: CCHormiga.CodigoProvincia > CCProvincia.CodigoProvincia
+Ref: CCHormiga.CodigoAlimento > CCAlimento.CodigoAlimento
+
+// Definición de tablas
+Table CCRegion {
+    CodigoRegion INTEGER [pk, increment]
+    NombreRegion VARCHAR(30) [not null, unique]
+    Estado VARCHAR(1) [not null, default: 'A']
+    FechaCrea DATETIME [default: 'now']
+    FechaModifica DATETIME
+}
+
+Table CCPais {
+    CodigoPais INTEGER [pk, increment]
+    NombrePais VARCHAR(30) [not null, unique]
+    Estado VARCHAR(1) [not null, default: 'A']
+    FechaCrea DATETIME [default: 'now']
+    FechaModifica DATETIME
+}
+
+Table CCProvincia {
+    CodigoProvincia INTEGER [pk, increment]
+    NombreProvincia VARCHAR(30) [not null, unique]
+    CodigoPais INTEGER [not null]
+    CodigoRegion INTEGER [not null]
+    Estado VARCHAR(1) [not null, default: 'A']
+    FechaCrea DATETIME [default: 'now']
+    FechaModifica DATETIME
+}
+
+Table CCTipoHormiga {
+    CodigoTipoHormiga INTEGER [pk, increment]
+    NombreTipoHormiga VARCHAR(30) [not null, unique]
+    Estado VARCHAR(1) [not null, default: 'A']
+    FechaCrea DATETIME [default: 'now']
+    FechaModifica DATETIME
+}
+
+Table CCSexo {
+    CodigoSexo INTEGER [pk, increment]
+    NombreSexo VARCHAR(15) [not null, unique]
+    Estado VARCHAR(1) [not null, default: 'A']
+    FechaCrea DATETIME [default: 'now']
+    FechaModifica DATETIME
+}
+
+Table CCEstado {
+    CodigoEstado INTEGER [pk, increment]
+    NombreEstado VARCHAR(20) [not null, unique]
+    Estado VARCHAR(1) [not null, default: 'A']
+    FechaCrea DATETIME [default: 'now']
+    FechaModifica DATETIME
+}
+
+Table CCIngestaNativa {
+    CodigoIngestaNativa INTEGER [pk, increment]
+    NombreIngestaNativa VARCHAR(20) [not null, unique]
+    Estado VARCHAR(1) [not null, default: 'A']
+    FechaCrea DATETIME [default: 'now']
+    FechaModifica DATETIME
+}
+
+Table CCGenoAlimento {
+    CodigoGenoAlimento INTEGER [pk, increment]
+    NombreGenoAlimento VARCHAR(20) [not null, unique]
+    Estado VARCHAR(1) [not null, default: 'A']
+    FechaCrea DATETIME [default: 'now']
+    FechaModifica DATETIME
+}
+
+Table CCAlimento {
+    CodigoAlimento INTEGER [pk, increment]
+    NombreAlimento VARCHAR(20) [not null, unique]
+    CodigoIngestaNativa INTEGER [not null]
+    CodigoGenoAlimento INTEGER [not null]
+    DescripcionAlimento VARCHAR(500) [not null]
+    Estado VARCHAR(1) [not null, default: 'A']
+    FechaCrea DATETIME [default: 'now']
+    FechaModifica DATETIME
+}
+
+Table CCHormigaAlimento {
+    CodigoHormigaAlimento INTEGER [pk, increment]
+    CodigoHormiga INTEGER [not null]
+    CodigoAlimento INTEGER [not null]
+    Estado VARCHAR(1) [not null, default: 'A']
+    FechaCrea DATETIME [default: 'now']
+    FechaModifica DATETIME
+}
+
+Table CCHormiga {
+    CodigoHormiga INTEGER [pk, increment]
+    NombreHormiga VARCHAR(30) [not null, unique]
+    CodigoSexo INTEGER [not null]
+    CodigoTipoHormiga INTEGER [not null]
+    CodigoEstado INTEGER [not null]
+    CodigoProvincia INTEGER [not null]
+    CodigoAlimento INTEGER [not null]
+    Estado VARCHAR(1) [not null, default: 'A']
+    FechaCrea DATETIME [default: 'now']
+    FechaModifica DATETIME
+}
