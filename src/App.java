@@ -21,14 +21,12 @@ import DataAccess.CCHormigaDAO;
 import DataAccess.DTO.CCAlimentoDTO;
 import DataAccess.DTO.CCHormigaAlimentoDTO;
 import DataAccess.DTO.CCHormigaDTO;
-import UserInterface.FormularioHormiga;
+import UserInterface.EcuaFauna2K24A;
+import UserInterface.LoginForm;
+import UserInterface.SplashScreen;
 
 public class App {
     public static void main(String[] args) {
-        
-        // Ejecutar el formulario
-        FormularioHormiga formulario = new FormularioHormiga();
-        formulario.setVisible(true);
 
         try {
             // Test CCRegionDAO
@@ -152,7 +150,9 @@ public class App {
         } catch (Exception e) {
             System.out.println("Error en CCHormigaDAO: " + e.toString());
         }
+
+        SplashScreen.show();
+        LoginForm.showLogin();
     }
 }
 
-// ComboBox
