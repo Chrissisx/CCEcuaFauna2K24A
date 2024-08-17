@@ -1,4 +1,4 @@
-package UserInterface;
+package UserInterface.Form;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,7 +25,7 @@ public class SplashScreen {
 
         for (int i = 0; i <= 100; i++) {
             try {
-                Thread.sleep(50);
+                Thread.sleep(50); // Simula el proceso de carga
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

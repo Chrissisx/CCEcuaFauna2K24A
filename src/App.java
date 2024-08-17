@@ -21,9 +21,8 @@ import DataAccess.CCHormigaDAO;
 import DataAccess.DTO.CCAlimentoDTO;
 import DataAccess.DTO.CCHormigaAlimentoDTO;
 import DataAccess.DTO.CCHormigaDTO;
-import UserInterface.EcuaFauna2K24A;
-import UserInterface.LoginForm;
-import UserInterface.SplashScreen;
+import UserInterface.Form.CCLogin;
+import UserInterface.Form.SplashScreen;
 
 public class App {
     public static void main(String[] args) {
@@ -152,7 +151,7 @@ public class App {
         }
 
         SplashScreen.show();
-        LoginForm.showLogin();
+        CCLogin.showLogin();
     }
 }
 

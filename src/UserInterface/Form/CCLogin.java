@@ -1,11 +1,12 @@
-package UserInterface;
+package UserInterface.Form;
 
 import javax.swing.*;
+import UserInterface.Gui.EcuaFauna2K24A;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class LoginForm {
+public class CCLogin {
     private static final String USERNAME = "pat_mic";
     private static final String PASSWORD = "123456";
 
@@ -30,7 +31,7 @@ public class LoginForm {
         panel.add(userText);
         panel.add(passwordLabel);
         panel.add(passwordText);
-        panel.add(new JLabel()); 
+        panel.add(new JLabel());
         panel.add(loginButton);
 
         loginFrame.add(panel);
